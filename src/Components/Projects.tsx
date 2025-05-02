@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="w-full h-screen flex flex-col justify-center items-center px-4 bg-[#F9F4F4] relative">
+    <section id="proyectos" className="min-h-screen bg-[#F9F4F4] py-16 px-4 md:px-8 lg:px-16 pt-24 md:pt-20 flex flex-col justify-center items-center">
       <div className="absolute inset-0 pointer-events-none">
         <Particles 
           particleCount={150} 
