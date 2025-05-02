@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="w-full h-screen flex flex-col justify-center items-center px-4 bg-[#F9F4F4] relative">
+    <section id="contacto" className="min-h-screen bg-[#F9F4F4] flex justify-center items-center py-16 px-4 md:px-8 lg:px-16 relative pt-24 md:pt-20">
       <div className="absolute inset-0 pointer-events-none">
         <Particles 
           particleCount={150} 
@@ -57,11 +57,11 @@ const Contact: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <BsEnvelope className="text-[#C94C4C] text-xl" />
-                <div className="flex items-center space-x-2">
-                  <span>{contactInfo.email}</span>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full max-w-md bg-white/50 backdrop-blur-sm p-4 rounded-lg shadow-md space-y-2 sm:space-y-0">
+                  <span className="break-all sm:mr-4">{contactInfo.email}</span>
                   <button 
                     onClick={handleCopyEmail} 
-                    className="text-sm text-[#A65A4A] hover:text-[#C94C4C] transition-colors"
+                    className="text-sm text-[#A65A4A] hover:text-[#C94C4C] transition-colors w-full sm:w-auto"
                   >
                     {copied ? 'Copiado!' : 'Copiar'}
                   </button>
