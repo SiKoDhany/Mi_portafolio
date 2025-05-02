@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-[#111827] bg-transparent">
+      <header className="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-[#111827] bg-white/80 backdrop-blur-sm">
         {/* Logo */}
         <div className="flex grow basis-0">
           <span className="font-bold text-2xl splash-font text-[#C94C4C]">

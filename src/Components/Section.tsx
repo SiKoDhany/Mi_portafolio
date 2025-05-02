@@ -5,7 +5,7 @@ import foto from "../photo/foto.jpeg";
 const Section = () => {
   return (
     <>
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-[#F9F4F4]">
+      <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-[#F9F4F4] pt-20">
         {/* Partículas de fondo */}
         <div className="absolute inset-0 z-10">
           <Particles
