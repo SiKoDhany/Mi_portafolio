@@ -6,6 +6,12 @@
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Custom Scrollbar */

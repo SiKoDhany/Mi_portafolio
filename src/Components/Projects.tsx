@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from './Particles';
+import { getAllProjects } from '../db';
 
 interface Project {
   title: string;
@@ -10,29 +11,7 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  const projects: Project[] = [
-    {
-      title: "Portfolio Web",
-      description: "Portafolio personal desarrollado con React, TypeScript y Tailwind CSS, diseñado para mostrar mis proyectos y habilidades.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      githubLink: "#",
-      demoLink: "#"
-    },
-    {
-      title: "Sistema de Gestión de Tareas",
-      description: "Aplicación web de gestión de tareas con funcionalidades CRUD, autenticación y persistencia de datos.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      githubLink: "#",
-      demoLink: "#"
-    },
-    {
-      title: "E-commerce Dashboard",
-      description: "Panel de administración para tienda en línea con visualización de métricas, inventario y ventas.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      githubLink: "#",
-      demoLink: "#"
-    }
-  ];
+  const projects: Project[] = getAllProjects();
 
   return (
     <section id="proyectos" className="min-h-screen bg-[#F9F4F4] py-16 px-4 md:px-8 lg:px-16 pt-24 md:pt-20 flex flex-col justify-center items-center">
@@ -71,7 +50,7 @@ const Projects: React.FC = () => {
                     href={project.githubLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-white/80 hover:text-white transition-colors"
+                    className="text-[#C94C4C] hover:text-[#A65A4A] transition-colors"
                   >
                     GitHub
                   </a>
@@ -81,7 +60,7 @@ const Projects: React.FC = () => {
                     href={project.demoLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-white/80 hover:text-white transition-colors"
+                    className="text-[#C94C4C] hover:text-[#A65A4A] transition-colors"
                   >
                     Demo
                   </a>
